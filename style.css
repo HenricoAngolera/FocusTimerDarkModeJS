@@ -1,0 +1,95 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #323238;
+  
+  --background-b-color: #E1E1E6;
+  --background-selected: #02799D;
+  --button-selected: #FFF;
+  
+  font-size: 62.5%;
+}
+
+button {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+button.selected {
+  background: var(--background-selected);
+}
+
+button svg path {
+  fill: var(--primary-color)
+}
+
+button.selected svg path {
+  fill: var(--button-selected)
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  width: 90rem;
+  margin: 19.6rem auto 0;
+}
+
+main {
+  width: 32.1rem;
+  color: var(--primary-color);
+}
+
+main .timer {
+  font-size: 12.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+main .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+aside {
+  width: 30.8rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+
+  color: var(--primary-color);
+}
+
+aside button {
+  border-radius: 2.4rem;
+  
+  background: var(--background-b-color);
+}
+
+aside button .slider {
+  padding: 3.2rem 2.4rem 2.4rem;
+}
+
+aside button .slider input {
+  width: 9rem;
+}
+
+aside button svg {
+  margin-top: 2.4rem;
+}
+
+
