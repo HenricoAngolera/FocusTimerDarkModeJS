@@ -7,12 +7,12 @@ import {
   buttonStop,
   buttonPlusFive,
   buttonMinusFive,
-  forestVolume,
-  rainVolume,
-  coffeeVolume,
-  fireVolume
+  lightButton,
+  darkButton,
+  body
 } from './elements.js'
 import Sound from './sounds.js'
+import DarkMode from './darkMode.js'
 
 export default function Event({ timer, backgroundSound }) {
   // botões de controle
@@ -50,10 +50,14 @@ export default function Event({ timer, backgroundSound }) {
 
   buttonFirePlaceSvg.addEventListener('click', function () {
     backgroundSound.firePlaceSound()
+  }) 
+
+  // dark mode
+  lightButton.addEventListener('click', function(){
+    DarkMode().darkModeOn()
   })
 
-  forestVolume.addEventListener('input', function () {
-    Sound().setForestVolume(forestVolume.value)
-    console.log(Sound().forest.volume)
+  darkButton.addEventListener('click', function(){
+    DarkMode().darkModeOff()
   })
 }

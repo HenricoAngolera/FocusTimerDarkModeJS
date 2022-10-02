@@ -7,39 +7,76 @@
 
 :root {
   --primary-color: #323238;
-  
-  --background-b-color: #E1E1E6;
-  --background-selected: #02799D;
-  --button-selected: #FFF;
-  
+
+  --background-b-color: #e1e1e6;
+  --background-b-selected: #02799d;
+  --button-selected: #fff;
+
+  --dark-background: #121214;
+  --dark-white-button-color: #FFF;
+  --dark-icon-color: #C4C4CC;
+  --dark-background-b-button: #29292E;
+  --dark-background-b-selected: #0A3442;
+
   font-size: 62.5%;
 }
 
 button {
   border: none;
   background: transparent;
+}
 
+button svg {
   cursor: pointer;
 }
 
-
 button.selected {
-  background: var(--background-selected);
+  background: var(--background-b-selected);
 }
 
 button svg path {
-  fill: var(--primary-color)
+  fill: var(--primary-color);
 }
 
 button.selected svg path {
-  fill: var(--button-selected)
+  fill: var(--button-selected);
+}
+
+button [type='range'] {
+  appearance: none;
+  background: var(--primary-color);
+  height: 0.5rem;
+  border-radius: 10rem;
+}
+
+button [type='range']::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--primary-color);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 10rem;
+}
+
+body.dark button [type='range'],
+button.selected [type='range']{
+  background: var(--button-selected);
+}
+ 
+body.dark button [type='range']::-webkit-slider-thumb,
+button.selected [type='range']::-webkit-slider-thumb {
+  background: var(--button-selected);
+}
+
+
+.hide {
+  display: none;
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
 
@@ -63,7 +100,6 @@ main .controls {
   justify-content: space-between;
 }
 
-
 aside {
   width: 30.8rem;
 
@@ -76,7 +112,7 @@ aside {
 
 aside button {
   border-radius: 2.4rem;
-  
+
   background: var(--background-b-color);
 }
 
@@ -92,4 +128,35 @@ aside button svg {
   margin-top: 2.4rem;
 }
 
+.toggle-dark-button {
+  position: fixed;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+/* DARK MODE */
+
+body.dark {
+  background-color: var(--dark-background);
+}
+
+body.dark button.selected {
+  background: var(--dark-background-b-selected);
+}
+
+body.dark button svg path {
+  fill: var(--dark-icon-color);
+}
+
+body.dark button.selected svg path {
+  fill: var(--dark-white-button-color);
+}
+
+body.dark main {
+  color: var(--dark-white-button-color);
+}
+
+body.dark aside button {
+  background: var(--dark-background-b-button);
+}
 

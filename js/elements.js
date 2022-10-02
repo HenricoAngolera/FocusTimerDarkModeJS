@@ -20,6 +20,10 @@ const buttonMinusFive = document.querySelector('.minus-five')
 const minutesDisplay = document.querySelector('#minutes')
 const secondsDisplay = document.querySelector('#seconds')
 
+const body = document.querySelector('body')
+const lightButton = document.querySelector('.light-button')
+const darkButton = document.querySelector('.dark-button')
+
 export {
   buttonForest,
   buttonRain,
@@ -38,5 +42,8 @@ export {
   forestVolume,
   rainVolume,
   coffeeVolume,
-  fireVolume
+  fireVolume,
+  body,
+  lightButton,
+  darkButton
 }

@@ -24,10 +24,6 @@ export default function () {
     kitchenTimer.play()
   }
 
-  function setForestVolume(forestVolume) {
-    forest.volume = forestVolume / 100
-  }
-
   return {
     forest,
     rain,
@@ -35,6 +31,5 @@ export default function () {
     fire,
     pressButton,
     timeEnd,
-    setForestVolume
   }
 }
