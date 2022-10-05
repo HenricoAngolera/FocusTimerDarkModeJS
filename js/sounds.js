@@ -1,3 +1,4 @@
+
 export default function () {
   const forest = new Audio('../audio/Floresta.wav')
   const rain = new Audio('../audio/Chuva.wav')

@@ -9,7 +9,6 @@ import {
   buttonMinusFive,
   lightButton,
   darkButton,
-  body
 } from './elements.js'
 import Sound from './sounds.js'
 import DarkMode from './darkMode.js'
